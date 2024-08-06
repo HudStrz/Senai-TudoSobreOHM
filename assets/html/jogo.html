@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz: Leis de Ohm</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-image: url(../images/Background.png);
+        }
+
+        .quiz-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+        }
+
+        .question {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .options {
+            list-style: none;
+            padding: 0;
+        }
+
+        .options li {
+            margin: 10px 0;
+        }
+
+        .option-btn {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.1s;
+        }
+
+        .option-btn:hover {
+            background-color: #0056b3;
+        }
+
+        .option-btn:active {
+            transform: scale(0.95);
+        }
+
+        .timer {
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: red;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .button-container {
+            margin-top: 20px;
+        }
+
+        #stop-btn {
+            padding: 5px 10px;
+            font-size: 14px;
+        }
+
+        /* Estilos para o link de voltar */
+        #back-btn {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #dc3545;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.1s;
+        }
+
+        #back-btn:hover {
+            background-color: #c82333;
+        }
+
+        #back-btn:active {
+            transform: scale(0.95);
+        }
+    </style>
+</head>
+<body>
+    <div class="quiz-container">
+        <h1>Jogo</h1>
+        <h2>Quiz: Sobre as curiosidades da Lei de Ohm</h2>
+        <button id="start-btn" class="option-btn">Jogar</button>
+        <div id="quiz" class="hidden">
+            <div class="question" id="question"></div>
+            <div class="timer" id="timer"></div>
+            <ul class="options" id="options"></ul>
+            <div class="button-container">
+                <button id="stop-btn" class="option-btn hidden">Parar</button>
+                <button id="next-btn" class="option-btn hidden">Próxima</button>
+                <!-- Botão de voltar -->
+                <a href="/index.html" id="back-btn">Voltar à Página Inicial</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>
